@@ -10,8 +10,10 @@ const app = express();
 
 app.engine('handlebars', expressHandleBars({layoutsDir: 'views/layouts/', defaultLayout: 'main-layout'}));
 
-app.set('view engine', 'handlebars');
+// Enable to Use EJS templates
+//app.set('view engine', 'handlebars');
 
+app.set('view engine', 'ejs')
 app.set('views', 'views');
 
 /*
