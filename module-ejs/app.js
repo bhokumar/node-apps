@@ -8,7 +8,10 @@ const expressHandleBars = require('express-handlebars');
 const app = express();
 
 
-app.engine('handlebars', expressHandleBars({layoutsDir: 'views/layouts/', defaultLayout: 'main-layout'}));
+app.engine('handlebars', expressHandleBars({
+    layoutsDir: 'views/layouts/',
+    defaultLayout: 'main-layout'
+}));
 
 // Enable to Use EJS templates
 //app.set('view engine', 'handlebars');
