@@ -46,4 +46,14 @@ module.exports = class Cart {
             });
         });
     }
+
+    static deleteProduct(id, productPrice) {
+        fs.readFile(p, (error, fileContent) => {
+            if (error) {
+                return;
+            }
+
+            const updatedCart = {...cart};
+        });
+    }
 }

@@ -1,16 +1,1 @@
-[
-  {
-    "title": "Second awesome book",
-    "imageUrl": "https://cdn.pixabay.com/photo/2016/03/31/20/51/book-1296045_960_720.png",
-    "description": "First book",
-    "price": "19.9",
-    "id": 0.44866370229383534
-  },
-  {
-    "title": "Second Book",
-    "imageUrl": "https://cdn.pixabay.com/photo/2016/03/31/20/51/book-1296045_960_720.png",
-    "description": "This book is really good",
-    "price": "10.2",
-    "id": 0.7171234147508134
-  }
-]
+[]
