@@ -52,8 +52,19 @@ module.exports = class Cart {
             if (error) {
                 return;
             }
-
-            const updatedCart = {...cart};
+            const cart = JSON.parse(fileContent);
+            const updatedCart = {
+                ...cart
+            };
+            const product = updatedCart.products.find(product => product.id === id);
+            const productQty = product.qty;
+            updatedCart.products = updatedCart.products.filter(prod => prod.id !== id);
+            updatedCart.totalPrice = updatedCart.totalPrice - productPrice * productQty;
+            fs.writeFile(p, updatedCart, error => {
+                if (error) {
+                    console.log('Error was there while saving file');
+                }
+            })
         });
     }
 }
