@@ -3,6 +3,7 @@ const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
 const expressHandleBars = require('express-handlebars');
+const mongoConnect = require('./util/database').mongoConnect;
 
 
 const app = express();
@@ -39,3 +40,8 @@ app.use(shopRoutes);
 app.use(errorHandler.get404);
 
 app.listen(3000);
+
+mongoConnect(client => {
+    console.log('Successfully connected to mongo db');
+    console.log(client);
+});
